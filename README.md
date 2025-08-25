@@ -9,6 +9,7 @@ It helps users with common queries like:
 - Route details between two cities  
 - Complaints about buses/drivers  
 - Greetings & small talk  
+⚡ This chatbot combines rule-based intent and entity extraction with an open-source LLM (Large Language Model) as a fallback to handle queries outside predefined patterns.
 
 The bot uses **intent detection + rule-based entity extraction** to understand queries in **English, Hindi, and Hinglish**.  
 
