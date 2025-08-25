@@ -1,0 +1,22 @@
+bus_id,source,destination,time,fare
+202,Panipat,Delhi,8:30 AM,₹45
+202,Delhi,Karnal,10:00 AM,₹50
+105,Rohtak,Delhi,9:15 AM,₹40
+301,Delhi,Ambala,11:00 AM,₹60
+410,Ambala,Chandigarh,7:45 AM,₹55
+501,Chandigarh,Shimla,6:30 AM,₹120
+502,Shimla,Manali,7:00 AM,₹150
+601,Delhi,Jaipur,8:00 AM,₹200
+602,Jaipur,Udaipur,9:30 AM,₹250
+701,Delhi,Agra,7:15 AM,₹180
+702,Agra,Lucknow,11:45 AM,₹220
+801,Lucknow,Kanpur,6:20 AM,₹90
+802,Kanpur,Varanasi,12:10 PM,₹160
+901,Delhi,Haridwar,5:30 AM,₹170
+902,Haridwar,Rishikesh,6:15 AM,₹50
+1001,Delhi,Dehradun,9:00 AM,₹190
+1002,Dehradun,Mussoorie,10:15 AM,₹70
+1101,Delhi,Amritsar,7:50 AM,₹350
+1102,Amritsar,Jalandhar,9:40 AM,₹100
+1201,Delhi,Ludhiana,6:30 AM,₹280
+1202,Ludhiana,Patiala,8:10 AM,₹120
