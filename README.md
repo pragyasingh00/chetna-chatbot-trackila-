@@ -16,21 +16,33 @@ The bot uses **intent detection + rule-based entity extraction** to understand q
 ---
 
 ## 🚀 Features
+Greetings support
 
-- **Multi-language support** (English, Hindi, Hinglish mix)  
-- **Intent recognition**:  
-  - Fare inquiry  
-  - Timings / schedule  
-  - Bus tracking  
-  - Bus status (late/on-time)  
-  - Complaints logging  
-  - Route search between cities  
-  - Greetings  
-- **Data-driven responses** (uses `chetnasample_buses.csv`)  
-- **Complaint logging system** (generates ticket IDs & saves in JSON)  
-- **Lightweight, runs locally** (no external APIs needed)  
+Fare inquiry
 
----
+Timing / schedule inquiry
+
+Bus tracking (location)
+
+Bus status inquiry
+
+Complaints system with Ticket ID
+
+Route information (between cities)
+
+Time period detection (morning/afternoon/evening/night)
+
+Next bus inquiry
+
+Language detection (English, Hindi, Hinglish)
+
+LLM fallback (local GPT4All)
+
+Robust entity extraction (bus number, source, destination)
+
+Optional voice input (Vosk)
+
+Optional text-to-speech (pyttsx3)
 
 ## 📂 Project Structure
 
