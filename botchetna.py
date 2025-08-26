@@ -54,8 +54,8 @@ def llm_fallback(prompt: str, lang: str) -> str:
         return ""
 
 # ---------------- Data ----------------
-DATA_PATH_JSON = "./chetnasample_buses.json"
-DATA_PATH_CSV  = "./chetnasample_buses.csv"
+DATA_PATH_JSON = "data/chetnasample_buses.json"
+DATA_PATH_CSV  = "data/chetnasample_buses.csv"
 
 loader = ChetnaLoader(DATA_PATH_JSON if os.path.exists(DATA_PATH_JSON) else DATA_PATH_CSV)
 BUSES = loader.load()
