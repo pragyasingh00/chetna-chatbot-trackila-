@@ -1,38 +1,11 @@
 # chetna_loader.py
 # Loads CSV/JSON datasets and provides search helpers for Chetna
-# Also integrates GPT4All if available
 
 import csv
 import json
 import os
 import random
 from datetime import datetime
-
-# ---------- Try loading GPT4All ----------
-try:
-    from gpt4all import GPT4All
-    _llm = GPT4All("ggml-gpt4all-j-v1.3-groovy")  # change model name if needed
-    _llm_available = True
-except Exception as e:
-    _llm = None
-    _llm_available = False
-
-
-def llm_available():
-    """Return True if GPT4All model loaded successfully"""
-    return _llm_available
-
-
-def ask_llm(prompt: str) -> str:
-    """Send a prompt to GPT4All if available, else return fallback text"""
-    if not _llm_available:
-        return "LLM not available on this system."
-    try:
-        with _llm.chat_session():
-            return _llm.generate(prompt, max_tokens=200)
-    except Exception as e:
-        return f"LLM error: {e}"
-
 
 class ChetnaLoader:
     def __init__(self, file_path=None):
@@ -62,7 +35,7 @@ class ChetnaLoader:
         return [
             {"bus_id": "202", "source": "Panipat", "destination": "Delhi", "time": "8:30 AM", "fare": "₹45"},
             {"bus_id": "702", "source": "Agra", "destination": "Lucknow", "time": "11:45 AM", "fare": "₹220"},
-            {"bus_id": "1001", "source": "Delhi", "destination": "Dehradun", "time": "9:00 AM", "fare": "₹190"},
+            {"bus_id": "1001", "source": "Agra", "destination": "Lucknow", "time": "6:15 PM", "fare": "₹250"},
         ]
 
     # ---------- Helpers ----------
