@@ -1,8 +1,10 @@
-langdetect==1.0.9
-openai==1.14.0   # or whichever LLM API you use
-googletrans==4.0.0-rc1  # if using translation API
-pyttsx3==2.90     # for TTS
-speechrecognition==3.10.0  # if using voice input
-flask==3.0.0      # if using web interface
+
+pip install langdetect 
+pyttsx3 
+SpeechRecognition 
+vosk 
+pyaudio
+gpt4all
+openai
 
 
