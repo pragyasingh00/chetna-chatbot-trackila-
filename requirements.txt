@@ -4,4 +4,5 @@ googletrans==4.0.0-rc1  # if using translation API
 pyttsx3==2.90     # for TTS
 speechrecognition==3.10.0  # if using voice input
 flask==3.0.0      # if using web interface
-click==8.1.7      # for CLI flags
+
+
