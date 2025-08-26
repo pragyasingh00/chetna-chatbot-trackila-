@@ -98,7 +98,7 @@ Follow these steps carefully to set up the chatbot in **Visual Studio Code**:
   ```  
 - Activate the virtual environment:  
   ```powershell
-  venv\Scriptsctivate
+  venv\Scriptsactivate
   ```  
 
 ### 5. Install Required Packages
