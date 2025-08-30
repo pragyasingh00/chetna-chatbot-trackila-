@@ -78,22 +78,20 @@ def respond3(en: str, hi: str, hinglish: str, lang: str) -> str:
         return en
     elif lang == "hi":
         return hi
-    elif lang == "hi_en":
-        # Extra safeguard: if the user message is mostly English words,
-        # prefer English instead of Hinglish.
-        # Example: "driver is very rude" should stay English.
-        if sum(c.isalpha() and ord(c) < 128 for c in hinglish) > len(hinglish) * 0.6:
-            return en
-        return hinglish
+    elif lang == "hi-latn":
+        # Prefer Hindi for Hinglish, unless Hinglish response is explicitly given
+        return hinglish or hi
     else:
         # Default to English if detection failed
         return en
 
-# Back-compat (en/hi only). If lang is hi-latn, we prefer Hinglish == English here.
+
+# Back-compat (en/hi only). If lang is hi-latn, we prefer Hindi here.
 def respond(en_text: str, hi_text: str, lang: str = "en") -> str:
-    if lang == "hi":
+    if lang in ("hi", "hi-latn"):
         return hi_text
     return en_text
+
 
 # ----------- Complaints -----------
 def _load_complaints():
@@ -160,3 +158,4 @@ def say(text: str):
         engine.runAndWait()
     except Exception:
         pass
+
